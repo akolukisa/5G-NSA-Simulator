@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #0a0a12;
+    --foreground: #f0f0f5;
+    --card: #141423;
+    --card-foreground: #f0f0f5;
+    --border: #2a2a40;
+    
+    /* Neon Colors */
+    --neon-blue: #00f0ff;
+    --neon-purple: #b026ff;
+    --neon-green: #00ff66;
+    --neon-red: #ff003c;
+    
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-[var(--background)] text-[var(--foreground)] font-sans antialiased overflow-x-hidden;
+    background-image: 
+      radial-gradient(circle at 15% 50%, rgba(176, 38, 255, 0.05), transparent 25%),
+      radial-gradient(circle at 85% 30%, rgba(0, 240, 255, 0.05), transparent 25%);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom Scrollbar for Cyberpunk feel */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background); 
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border); 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neon-purple); 
+}
+
+.glow-blue {
+  box-shadow: 0 0 15px -3px rgba(0, 240, 255, 0.4);
+}
+
+.glow-purple {
+  box-shadow: 0 0 15px -3px rgba(176, 38, 255, 0.4);
+}
+
+.glow-text-blue {
+  text-shadow: 0 0 8px rgba(0, 240, 255, 0.6);
+}
+
+.glow-text-purple {
+  text-shadow: 0 0 8px rgba(176, 38, 255, 0.6);
+}
+
+.cyber-grid {
+  background-image: 
+    linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 30px 30px;
+}

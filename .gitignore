@@ -1,0 +1,31 @@
+# macOS
+.DS_Store
+
+# Logs
+*.log
+logs
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# Node / Vite (dashboard)
+dashboard/node_modules/
+dashboard/dist/
+dashboard/dist-ssr/
+dashboard/.vite/
+dashboard/*.local
+
+# Build / artifacts
+**/build/
+**/dist/
+
+# ns-3 / ns-allinone (çok büyük; repo dışında tut)
+ns-allinone-3.37/
+
+# IDE
+.idea/
+.vscode/
